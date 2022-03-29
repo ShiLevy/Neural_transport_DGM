@@ -4,7 +4,8 @@ This is a pyro implementation of the combined neural-transporta and deep generat
 The folder includes the SGAN and VAE .pth checkout files used to perform inversion, neural-transport inference code as well as the models presented
 in the paper.
 
-## Scripts:
+## Scripts and files:
+-Neural_transport.py 
 
 **SGAN**
 
