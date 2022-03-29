@@ -133,7 +133,7 @@ class Posterior(dist.TorchDistribution):
                 for ii in range(s_m.shape[0]):
                     J[ii] = nonlinear(s_m[ii], self.tt, ndata)
                 self.G = torch.Tensor(J).to(self.device)
-#%%
+#%%  ===============================================================================================================
             sim = self.G@s_model.reshape([s_model.shape[0], -1, 1])
             e = self.d-sim[:,:,0]
             
@@ -236,7 +236,7 @@ def main(args):
         dims = samp.shape
     else:
         print('not a valid DGM')
-    #%%
+    #%%  ===============================================================================================================
     
     setup.total_event_size = samp.size
     if args.saved_model=='None':
