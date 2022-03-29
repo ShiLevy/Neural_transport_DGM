@@ -1,17 +1,34 @@
-# Neural_transport
+# Neural transport with deep generative models
 
 This is a pyro implementation of the combined neural-transporta and deep generative models approach presented in "" (submitted to <> under review). 
 The folder includes the SGAN and VAE .pth checkout files used to perform inversion, neural-transport inference code as well as the models presented
 in the paper.
 
 ## Scripts and files:
--Neural_transport.py 
+
+-Neural_transport.py        --> the main routine to perform the inference and train the transform 
+
+-setup_FWsolver_torch.py    --> setup foraward solver (either simple straight-ray or fastest path)
+
+-autoencoder_in.py          --> VAE generation code
+
+-generator.py               --> SGAN generation code
+
+-test_models (folder)       --> all tested models as well as noise vector and samples to loaded for samples shape
 
 **SGAN**
 
+.pth files for generating SGAN images. Training codes can be found [here](https://github.com/elaloy/gan_for_gradient_based_inv/tree/master/training)
+
+-netG_epoch_24.pth (Unmasked training for "mg" models)
+
+-netG_epoch_34.pth (Trained with masking TI portions for the "mc" models)
 
 **VAE**
 
+.pth files for generating VAE images 
+
+-VAE_inMSEeps100r1e3.pth (Taken from [here](https://github.com/jlalvis/VAE_SGD/tree/master/VAE))
 
 ## Citation :
 
