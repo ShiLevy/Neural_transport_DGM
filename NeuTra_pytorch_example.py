@@ -196,6 +196,7 @@ def main(args):
     setup = sfw.setup()  # initialize data object containing SGD parameters
     setup.sigma = args.sigma  # noise std [ns]
 
+    #%% this block was modified from Lopez-Alvis et al. (2021) https://github.com/jlalvis/VAE_SGD/blob/master/SGD_DGM.py
     # check if GPU is available ()
     device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
 
@@ -235,7 +236,8 @@ def main(args):
         dims = samp.shape
     else:
         print('not a valid DGM')
-
+    #%%
+    
     setup.total_event_size = samp.size
     if args.saved_model=='None':
         zs = torch.reshape(pyro.sample('zs', prior(setup.total_event_size)), dims)[np.newaxis]
