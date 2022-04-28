@@ -388,7 +388,7 @@ if __name__ == "__main__":
     )  
     parser.add_argument("--sigma", default=1, type=int, help="standard deviation of the noise in [ns]"
     )    
-    parser.add_argument("--workdir", default='/home/slevy/Desktop/Neutra/neutra_SGAN/', type=str, help="working directory (where all the models are"
+    parser.add_argument("--workdir", default='./', type=str, help="working directory (where all the models are"
     )
     parser.add_argument("--outdir", default= './', type=str, help="directory to save results in"
     )
