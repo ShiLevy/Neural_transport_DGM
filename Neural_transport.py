@@ -390,11 +390,11 @@ if __name__ == "__main__":
     )    
     parser.add_argument("--workdir", default='/home/slevy/Desktop/Neutra/neutra_SGAN/', type=str, help="working directory (where all the models are"
     )
-    parser.add_argument("--outdir", default= '/home/slevy/Desktop/Neutra/tests/', type=str, help="directory to save results in"
+    parser.add_argument("--outdir", default= './', type=str, help="directory to save results in"
     )
     
     args = parser.parse_args()
-    with open('/home/slevy/Desktop/Neutra/tests/run_commandline_args.txt', 'w') as f:
+    with open(args.outdir+'/run_commandline_args.txt', 'w') as f:
         json.dump(args.__dict__, f, indent=2)
     
     main(args)
