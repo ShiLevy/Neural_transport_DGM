@@ -20,13 +20,13 @@ in the paper.
 
 .pth file for generating SGAN images. Training codes can be found [here](https://github.com/elaloy/gan_for_gradient_based_inv/tree/master/training)
 
--netG_epoch_24.pth (Unmasked training for "mg" models)
+-netG_epoch_24.pth
 
 **VAE**
 
-.pth files for generating VAE images 
+.pth files for generating VAE images (Taken from [here](https://github.com/jlalvis/VAE_SGD/tree/master/VAE))
 
--VAE_inMSEeps100r1e3.pth (Taken from [here](https://github.com/jlalvis/VAE_SGD/tree/master/VAE))
+-VAE_inMSEeps100r1e3.pth 
 
 ## Citation :
 
