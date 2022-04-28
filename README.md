@@ -18,11 +18,9 @@ in the paper.
 
 **SGAN**
 
-.pth files for generating SGAN images. Training codes can be found [here](https://github.com/elaloy/gan_for_gradient_based_inv/tree/master/training)
+.pth file for generating SGAN images. Training codes can be found [here](https://github.com/elaloy/gan_for_gradient_based_inv/tree/master/training)
 
 -netG_epoch_24.pth (Unmasked training for "mg" models)
-
--netG_epoch_34.pth (Trained with masking TI portions for the "mc" models)
 
 **VAE**
 
