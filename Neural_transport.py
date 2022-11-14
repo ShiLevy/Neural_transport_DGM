@@ -244,7 +244,7 @@ def main(args):
         if DGM == 'SGAN':
             zs = zs[np.newaxis]
     else:
-        zs = torch.tensor(np.load('/home/slevy/Desktop/Neutra/neutra_SGAN/test_models/'+args.saved_model+'.npy'))
+        zs = torch.tensor(np.load('./test_models/'+args.saved_model+'.npy'))
 
     setup.zs = zs
     m = netG(zs)
