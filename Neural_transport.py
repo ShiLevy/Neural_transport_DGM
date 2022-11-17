@@ -250,13 +250,8 @@ def main(args):
         m = (m + 1) * 0.5
     m = m.detach().numpy()
     
-    # plt.figure(1)
-    # plt.imshow(m[0, 0], cmap='Greys_r')
-    # plt.colorbar()
-    # plt.show()
-    
     #if running a model cropped from the training image uncomment the following line:
-    # m = np.load('/home/slevy/Desktop/Neutra/neutra_SGAN/test_models/'+args.saved_model+'.npy')[np.newaxis,np.newaxis]
+    # m = np.load('./test_models/'+args.saved_model+'.npy')[np.newaxis,np.newaxis]
     
     setup.DGM = DGM
     setup.device = device
