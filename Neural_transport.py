@@ -99,9 +99,7 @@ class Posterior(dist.TorchDistribution):
         return torch.zeros(sample_shape + self.batch_shape + self.event_shape)
 
     def log_prob(self, state):
-
-        '''to check: should it be multiplied by the prior?'''
-
+        
         # reshape state tensor generator input shape
         if self.DGM == 'SGAN':
             zx = 5
