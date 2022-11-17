@@ -250,9 +250,6 @@ def main(args):
         m = (m + 1) * 0.5
     m = m.detach().numpy()
     
-    #if running a model cropped from the training image uncomment the following line:
-    # m = np.load('./test_models/'+args.saved_model+'.npy')[np.newaxis,np.newaxis]
-    
     setup.DGM = DGM
     setup.device = device
     setup.batch_size = batch_size
