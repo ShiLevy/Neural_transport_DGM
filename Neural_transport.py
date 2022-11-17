@@ -129,7 +129,7 @@ class Posterior(dist.TorchDistribution):
 #%% this block was modified from Lopez-Alvis et al. (2021) https://github.com/jlalvis/VAE_SGD/blob/master/SGD_DGM.py
                 s_m = s_model.detach().cpu().numpy()
                 ndata = self.tt.fop.data['t'].shape[0]
-                J = np.zeros((s_m.shape[0], ndata, self.tt.inv.parameterCount))
+                J = np.zeros((s_m.shape[0], ndata, self.tt.fop.parameterCount))
                 for ii in range(s_m.shape[0]):
                     J[ii] = nonlinear(s_m[ii], self.tt, ndata)
                 self.G = torch.Tensor(J).to(self.device)
@@ -154,7 +154,7 @@ class Posterior(dist.TorchDistribution):
         return log_like + self.prior.log_prob(state)
 
 def nonlinear(s_m, tt, ndata):
-    G = np.zeros((ndata, tt.inv.parameterCount))
+    G = np.zeros((ndata, tt.fop.parameterCount))
     tt.Velocity = pg.Vector(np.float64(1./s_m.flatten()))
     tt.fop.createJacobian(1./tt.Velocity)
     G = pg.utils.sparseMatrix2Dense(tt.fop.jacobian())
