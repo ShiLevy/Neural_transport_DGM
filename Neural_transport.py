@@ -190,7 +190,7 @@ def main(args):
     num_particles = args.num_particles
     solver = args.solver    # 'linear - Straight-ray, nonlinear - Eikonal
     DGM = args.DGM  # choose from: 'VAE' or 'SGAN'
-    decay_lr = 0  #If to use exponential decay of the learning rate
+    decay_lr = 0  #If to use exponential decay of the learning rate (DOESN'T WORK AT THE MOMENT, TO BE FIXED!)
     setup = sfw.setup()  # initialize data object containing SGD parameters
     setup.sigma = args.sigma  # noise std [ns]
 
