@@ -1,6 +1,6 @@
 # Neural transport with deep generative models
 
-This is a pyro implementation of the combined neural-transporta and deep generative models approach presented in "Variational Bayesian inference with complex geostatistical priors using inverse autoregressive flows" (submitted to Computers & Geosciences and currently under review). 
+This is a pyro implementation of the combined neural-transport and deep generative models approach presented in "Variational Bayesian inference with complex geostatistical priors using inverse autoregressive flows" (submitted to Computers & Geosciences and currently under review). 
 The folder includes the SGAN and VAE .pth checkout files used to perform inversion, neural-transport inference code as well as the models presented
 in the paper.
 
